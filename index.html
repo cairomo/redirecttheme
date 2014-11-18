@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+                         _                    _            
+  _ __ ___    ___   ___ | |__    __ _  _ __  (_) ___   ___ 
+ | '_ ` _ \  / _ \ / __|| '_ \  / _` || '_ \ | |/ __| / _ \
+ | | | | | ||  __/| (__ | | | || (_| || | | || |\__ \|  __/
+ |_| |_| |_| \___| \___||_| |_| \__,_||_| |_||_||___/ \___|
+                                                           
+|||||||||||||||||| made by mechanise.tumblr.com |||||||||||||||||||||
+do not remove credit
+@author cairo mechanise
+-->
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+    <head>
+        {MobileAppHeaders}
+        <meta charset="utf-8">
+        <title>{Title}</title>
+        {block:Description}
+        <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+
+        <meta name="text:new" content="newurl">
+        <meta name="text:greet" content = "ask for url at">
+        <meta name="text:url" content="http://aaa.tumblr.com">
+        <meta name="color:bg" content="#000">
+        <meta name="color:txt" content="#fff">
+        
+        <meta name="if:gradient" content="">
+        <meta name="color:color1" content="#B6E9FA">
+        <meta name="color:color2" content="#FCDEF7">
+
+        <link rel="shortcut icon" href="{Favicon}">
+       
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link href='http://fonts.googleapis.com/css?family=Roboto:500,700' rel='stylesheet' type='text/css'>
+
+
+<script type="text/javascript" src="http://laura-schmal.de/data/tumblr/lightbox/js/jquery-1.7.2.min.js"></script>
+<script src="http://static.tumblr.com/rzl30kg/eAxm7a751/jquery.style-my-tooltips.js"></script>
+  
+<script>
+    (function($){
+    $(document).ready(function(){
+    $("[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:200,
+    tip_fade_speed:300
+    }
+    );
+    });
+    })(jQuery);
+</script>
+        <!-- HTML5 Shiv -->
+        <!--[if lt IE 9]>
+            <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+        <![endif]-->
+
+<style>
+   
+       /*hover text*/
+    
+    #s-m-t-tooltip{
+        font-family: 'Roboto';
+        font-size:12px;
+        position:absolute;
+        margin-bottom: 20px;
+        letter-spacing:1px;
+        z-index:9999;
+        background:{color:bg};
+        border:1px solid {color:txt};
+        padding:2px 3px 2px 3px;
+        max-width: 300px;
+    }
+     
+   
+    body, html {
+        {block:ifGradient}
+        background: -moz-linear-gradient(top, {color:color1}; 0%, {color:color2} 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,{color:color1}), color-stop(100%,{color:color2})); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, {color:color1} 0%,{color:color2} 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, {color:color1} 0%, {color:color2} 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, {color:color1} 0%,{color:color2} 100%); /* IE10+ */
+		background-attachment:fixed;
+        {/block:ifGradient}
+        {block:ifNotGradient}
+             background: {color:bg};
+        {/block:ifNotGradient}
+        background-attachment:fixed;
+        color: {color:txt};
+        width:100%;
+        height:100%;
+        position:absolute;
+    }
+    a {
+        border: 8px solid {color:txt};
+        padding: 10px 20px 10px 20px;
+        color: {color:txt};
+        text-decoration: none;
+        font-size:72px;
+        font-style: italic;
+        letter-spacing:10px;
+        font-weight:700;
+        {block:ifGradient}
+            opacity:0.7;
+        {/block:ifGradient}
+    }
+    
+    a:hover {
+        {block:ifGradient}
+            opacity:1;
+        {/block:ifGradient}
+        {block:ifNotGradient}
+            color: {color:bg};
+            background-color: {color:txt};
+        {/block:ifNotGradient}
+    }
+    
+    #main {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align:center;
+        text-align:center;
+        font-size:64px;
+        font-weight:500;
+        font-family:'Roboto';
+        letter-spacing:5px;
+        line-height:100px;
+    }
+    
+    #x {
+        bottom: 10px;
+        font-size: 10px;
+        color: {color:txt};
+        position: absolute;
+        right: 10px;
+    }
+    
+    #x a {
+        font-size: 10px;
+        border:none;
+        font-style:normal;
+        padding:5px;
+    }
+
+
+     </style>
+    </head>
+    <body>
+        
+       <div id="main"> {text:greet} <p><a href = "{text:url}">{text:new}</a></div>
+       <div id = "x"><a href = "http://mechanise.tumblr.com" title = "credit">©</a></div>
+    </body>
+</html>
